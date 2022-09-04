@@ -1,0 +1,37 @@
+<h2 [ngStyle]="{'background-color':'yellow'}">Signup</h2>
+<mat-card>
+  <form (submit)="OnSignup(signupForm)" #signupForm="ngForm">
+  <mat-form-field>
+    <input
+     matInput
+     type="email"
+     name="email"
+     ngModel
+     #emailInput="ngModel"
+     required
+     placeholder="Email"
+     >
+     <mat-error *ngIf="emailInput.invalid">Please enter email </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+     matInput
+     type="password"
+     name="password"
+     ngModel
+     #passwordInput="ngModel"
+     required
+     placeholder="Password"
+     >
+     <mat-error *ngIf="passwordInput.invalid">Please enter password </mat-error>
+  </mat-form-field>
+
+<button
+  mat-raised-button
+  color = "accent"
+  type="submit">Signup</button>
+ </form>
+</mat-card>
+
+

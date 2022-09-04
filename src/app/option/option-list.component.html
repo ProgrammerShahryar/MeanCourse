@@ -1,0 +1,8 @@
+<ul *ngFor="let item of options">
+<li [ngClass]="{
+    'text-low': item.priority === 'low',
+    'text-medium': item.priority === 'medium',
+    'text-high': item.priority === 'high'
+}"> {{item.task}} ({{item.priority}})</li>
+</ul>
+
